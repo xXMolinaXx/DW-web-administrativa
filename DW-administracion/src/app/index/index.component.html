@@ -1,0 +1,20 @@
+<app-navbar></app-navbar>
+<div class="container">
+    <div class="row">
+        <div class="col p">
+            <div class="bloque-gris p">
+                <h2>Hola ,esta es la administracion de PLATAM</h2>
+                <br> para poder acceder a todas las funciones de la administracions ocupas ingresar con un usuario
+            </div>
+        </div>
+        <div class="col p2 ">
+            <H1>ACCESO</H1>
+            <input [(ngModel)]="correo" class="form-control form-control-lg m-input" type="text" placeholder="usuario" aria-label=".form-control-lg example">
+            <input [(ngModel)]="contrasena" class="form-control form-control-lg m-input" type="password" placeholder="contrasena" aria-label=".form-control-lg example">
+            <button type="button" class="btn btn-primary" (click)="ingresar()">INGRESAR</button><br><br>
+            <p>nota: <br>para el acceso los usuarios ya estan creado ,si trabajas con nosotros debes solicitar a la administracion un usuario valido</p>
+
+            <p>usuario:admin123 contra:qwerty</p>
+        </div>
+    </div>
+</div>

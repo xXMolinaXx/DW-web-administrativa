@@ -1,0 +1,17 @@
+.p {
+    padding: 100px;
+}
+
+.p2 {
+    padding: 100px 10px;
+}
+
+.m-input {
+    margin-bottom: 30px;
+}
+
+.bloque-gris {
+    background-color: rgba(128, 128, 128, 0.5);
+    height: 400px;
+    text-align: center;
+}
