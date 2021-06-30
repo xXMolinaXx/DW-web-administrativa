@@ -54,7 +54,13 @@ this.modalService.open(modal,{size:'lg',centered:true});
     this.traerCategorias()
   }
     /*******CATEGORIAS */
-    
+  eliminarCategoria(id:any){
+    this.http.delete('http://localhost:8888/categorias/'+id)
+    .subscribe(res=>{
+      console.log(res);
+      this.traerCategorias;
+    });
+  }
 
     
 

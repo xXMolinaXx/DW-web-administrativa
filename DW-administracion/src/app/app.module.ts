@@ -11,6 +11,7 @@ import { FormsModule } from '@angular/forms';
 import { NavbarComponent } from './navbar/navbar.component';
 import { AdmicomercioComponent } from './admicomercio/admicomercio.component';
 import { IndexComponent } from './index/index.component';
+import { AdministrarProductosComponent } from './administrar-productos/administrar-productos.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { IndexComponent } from './index/index.component';
     NavbarComponent,
     AdmicomercioComponent,
     IndexComponent,
+    AdministrarProductosComponent,
 
   ],
   imports: [

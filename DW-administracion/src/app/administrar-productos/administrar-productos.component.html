@@ -1,0 +1,55 @@
+<app-navbar></app-navbar>
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Descripcion</th>
+            <th scope="col">precio</th>
+            <th scope="col">eventos</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor='let el of productos,let i=index'>
+            <th scope="row">{{i+1}}</th>
+            <td>{{el.nombre}}</td>
+            <td>{{el.descripcion}}</td>
+            <td>{{el.precio}} L</td>
+            <td>
+                <button type="button" class="btn btn-warning m5">Actualizar</button>
+                <button type="button" class="btn btn-danger m5">Eliminar</button>
+            </td>
+        </tr>
+    </tbody>
+    <tfoot>
+        <tr>
+            <td>
+                Agregar un producto
+            </td>
+            <td>
+                <button class="btn btn-light" (click)="abrirModal(modal)"><fa-icon [icon]="faPlus"></fa-icon></button>
+            </td>
+        </tr>
+    </tfoot>
+</table>
+
+
+<ng-template #modal let-modal>
+    <div class="modal-header">
+        <h4 class="modal-title" id="modal-basic-title">Agregar producto</h4>
+        <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+        <form>
+            <input [(ngModel)]="nombre" [ngModelOptions]="{standalone: true}" class="form-control form-control-lg m20" type="text" placeholder="nombre" aria-label=".form-control-lg example">
+            <input [(ngModel)]="descripcion" [ngModelOptions]="{standalone: true}" class="form-control form-control-lg m20" type="text" placeholder="descripcion" aria-label=".form-control-lg example">
+            <input [(ngModel)]="imagen" [ngModelOptions]="{standalone: true}" class="form-control form-control-lg m20" type="text" placeholder="nombre de la imagen" aria-label=".form-control-lg example">
+            <input [(ngModel)]="precio" [ngModelOptions]="{standalone: true}" class="form-control form-control-lg m20" type="number" aria-label=".form-control-lg example">
+        </form>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-outline-dark" (click)="agregarProducto()">agregar</button>
+    </div>
+</ng-template>
